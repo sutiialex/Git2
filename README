@@ -1,0 +1,11 @@
+Author: Alexandru Sutii
+Project: Git2 client
+
+This project's purpose is to implement a git client with some basic
+commands using libgit2 library.
+
+I will focus on implementing some "plumbing" commands, expecially 
+object manipulation low-level commands.
+
+Currently implemented command:
+    - git-mktag
