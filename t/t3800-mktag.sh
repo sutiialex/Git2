@@ -356,7 +356,7 @@ EOF
 
 test_expect_success \
     'create valid tag' \
-    '$GIT2_PATH/git2 mktag <tag.sig >.git/refs/tags/mytag 2>message'
+	'$GIT2_PATH/git2 mktag <tag.sig &>message'
 
 ############################################################
 # 25. check mytag
