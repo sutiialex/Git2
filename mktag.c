@@ -192,12 +192,13 @@ static int verify_and_create_tag(git_repository *repo, char *buffer, unsigned lo
 	if ((tagger = git_signature_new(author_name, author_email, atoi(timestamp), atoi(offset))) == NULL)
 		return error("Could create the signature");
 	if (git_tag_create(&tag_oid, repo, tagname, &target_oid, target_type, tagger, tagger_line+1))
-		return error("Could not create the tag");
+        perror("nu pot");
+//		return error("Could not create the tag");
 
 	char out[41];
 	out[40] = 0;
 	git_oid_fmt(out, &tag_oid);
-	printf("Tag sha1: %s\n", out);
+	printf("%s\n", out);
 
 	return 0;
 }

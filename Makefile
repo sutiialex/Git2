@@ -12,5 +12,8 @@ mktag.o: mktag.c
 
 usage.o: usage.c
 
+test: build
+	./t/t3800-mktag.sh
+
 clean:
 	rm -f *.o git2
